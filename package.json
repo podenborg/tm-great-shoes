@@ -1,0 +1,20 @@
+{
+  "name": "great-shoes-inc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --watch css/styles.scss css/styles.css",
+    "build:sass": "node-sass --output-style compressed css/styles.scss build/css/styles.css",
+    "server": "live-server --port=8888",
+    "start": "npm-run-all --parallel sass server",
+    "copy": "cp -R img build/img && cp index.html build/index.html",
+    "build": "npm run copy && npm run build:sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
